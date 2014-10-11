@@ -7,7 +7,6 @@ angular.module('cmsApp')
 
     $scope.createContent = function (ctype) {
         if (!$scope.newTitle) {
-            //alert('Title is required');
             notificationService.error('Title is required');
             return;
         }

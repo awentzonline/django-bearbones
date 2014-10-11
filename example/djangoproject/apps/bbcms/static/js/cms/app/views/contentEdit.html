@@ -9,7 +9,7 @@
 <ng-include src="'/cms/templates/content/' + content.ctype + '.html'"></ng-include>
 <ng-switch>
     <div ng-switch-when="content.ctype">
-        <ng-include src="'/cms/templates/content/' + content.ctype + '.html'"></ng-include>
+        <ng-include ng-src="'/cms/templates/content/' + content.ctype + '.html'"></ng-include>
     <div>
-    <div ng-switch-default>Crap</div>
+    <div ng-switch-default>Loading...</div>
 </ng-switch>

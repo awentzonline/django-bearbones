@@ -17,9 +17,8 @@ author = 'Adam Wentz'
 author_email = 'floppya@gmail.com'
 license = 'MIT'
 requires = [
-    'Django==1.6',
-    'django-polymorphic',
-    'south',
+    'Django==1.7',
+    'django-polymorphic'
 ]
 
 
