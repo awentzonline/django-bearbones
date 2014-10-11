@@ -1,0 +1,17 @@
+*.py[cod]
+.tmp
+venv
+*.sqlite3
+example/djangoproject/settings/production.py
+example/djangoproject/static/bower/*
+example/node_modules/*
+example/deploy
+example/var/*
+!var/README.md
+!var/static/README.md
+!var/media/README.md
+*.egg-info/
+.DS_Store/
+*.log
+.sass-cache/
+npm-debug.log

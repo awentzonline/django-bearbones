@@ -1,0 +1,30 @@
+{
+  "name": "bearbones-example",
+  "version": "0.0.1",
+  "homepage": "https://github.com/awentzonline/django-bearbones",
+  "description": "Static files!",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "lodash": "~2.4.1",
+    "angular": "1.2.6",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.10.2",
+    "bootstrap": "~3.0.3",
+    "angular-resource": "1.2.6",
+    "angular-cookies": "1.2.6",
+    "angular-sanitize": "1.2.6",
+    "angular-route": "1.2.6",
+    "restangular": "~1.4.0",
+    "angular-pnotify": "~0.0.5"
+  },
+  "license": "MIT"
+}

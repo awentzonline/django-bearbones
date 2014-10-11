@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ content.title|striptags }}{% endblock %}
+{% block body %}
+    {% block body_heading %}
+        <h1>Content</h1>
+    {% endblock %}
+    {% block body_content %}
+        <ul class="content-list">
+        {% for content in content_list %}
+            <li class="content-item">
+            {% block content_list_item %}
+                <h3><a href="{{ content.get_absolute_url }}">
+                    {{ content.title }}
+                </a></h3>
+            {% endblock %}
+            </li>
+        {% endfor %}
+        </ul>    
+    {% endblock %}
+{% endblock %}

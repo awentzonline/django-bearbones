@@ -1,0 +1,6 @@
+{% extends "bearbones/content_list.html" %}
+{% block content_list_item %}
+    <h2><a href="{{ content.get_absolute_url }}">
+        {{ content.title }}
+    </a></h2>
+{% endblock %}
