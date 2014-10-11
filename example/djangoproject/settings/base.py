@@ -108,7 +108,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DEPLOY_DIR, 'media')
 
 BOWER_BASE_DIR = os.path.join(BASE_DIR, 'static/bower')
-NPM_BASE_DIR = os.path.join(BASE_DIR, '../../node_modules')
+NPM_BASE_DIR = os.path.join(BASE_DIR, '../node_modules')
 PIPELINE_COMPILERS = (
   'pipeline.compilers.less.LessCompiler',
 )
@@ -127,7 +127,7 @@ PIPELINE_CSS = {
         'source_filenames': (
             'bower/bootstrap/dist/css/bootstrap.min.css',
             'bower/bootstrap/dist/css/bootstrap-theme.min.css',
-            'css/main.less',
+            'css/example.less',
         ),
         'output_filename': 'css/main.css'
     },
@@ -137,6 +137,7 @@ PIPELINE_CSS = {
             'bower/pnotify/pnotify.core.css',
             'bower/pnotify/pnotify.buttons.css',
             'bower/pnotify/pnotify.history.css',
+            'css/bbcms.css',
         ),
         'output_filename': 'css/cms.css'
     }
