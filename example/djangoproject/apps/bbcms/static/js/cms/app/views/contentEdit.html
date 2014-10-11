@@ -6,10 +6,4 @@
   </ul>
   <h3 class="text-muted"><a class="active" ng-href="#">bearbones</a> / edit</h3>
 </div>
-<ng-include src="'/cms/templates/content/' + content.ctype + '.html'"></ng-include>
-<ng-switch>
-    <div ng-switch-when="content.ctype">
-        <ng-include ng-src="'/cms/templates/content/' + content.ctype + '.html'"></ng-include>
-    <div>
-    <div ng-switch-default>Loading...</div>
-</ng-switch>
+<ng-include src="'/cms/templates/content/' + (content.ctype || '_no_content') + '.html'"></ng-include>
