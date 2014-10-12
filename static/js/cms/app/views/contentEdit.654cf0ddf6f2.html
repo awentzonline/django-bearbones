@@ -1,0 +1,9 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-click="saveContent()">Save</a></li>
+    <li><a ng-href="{{ content.absolute_url }}" target="_blank">Preview</a></li>
+    <li><a ng-click="publishContent()">Publish</a></li>
+  </ul>
+  <h3 class="text-muted"><a class="active" ng-href="#">bearbones</a> / edit</h3>
+</div>
+<ng-include src="'/cms/templates/content/' + (content.ctype || '_no_content') + '.html'"></ng-include>

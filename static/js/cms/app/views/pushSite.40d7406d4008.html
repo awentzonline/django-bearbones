@@ -1,0 +1,21 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    
+  </ul>
+  <h3 class="text-muted"><a class="active" ng-href="#">bearbones</a> / push</h3>
+</div>
+
+<h2>Preview Changes</h2>
+
+<button class="btn btn-lg" ng-click="fetchPreview()">Get Preview</button>
+<div ng-show="preview">
+    <p ng-bind="preview"></p>
+</div>
+
+<h2>Recent pushes</h2>
+<table>
+    <tr ng-repeat="sitePush in recentPushes">
+        <td>{{ sitePush.time_started }}</td>
+        <td>{{ sitePush.time_completed }}</td>
+    </tr>
+</table>
