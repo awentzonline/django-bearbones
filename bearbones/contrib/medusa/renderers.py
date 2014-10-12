@@ -18,7 +18,7 @@ class SettingsPathRenderer(StaticSiteRenderer):
 
 class BaseContentDetailRenderer(StaticSiteRenderer):
     model = BaseContent
-    
+
     def get_paths(self):
         self.time_last_update = self.get_time_last_update()
         qs = self.get_queryset()

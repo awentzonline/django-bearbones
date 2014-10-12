@@ -77,3 +77,11 @@ body {
     border-bottom: 0;
   }
 }
+
+/////////////////
+
+.chunk-row {
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+
+}

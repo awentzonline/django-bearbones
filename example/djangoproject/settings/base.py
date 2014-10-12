@@ -177,10 +177,10 @@ PIPELINE_JS = {
     }
 }
 
-MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
-MEDUSA_MULTITHREAD = True
+MEDUSA_RENDERER_CLASS = 'django_medusa.renderers.DiskStaticSiteRenderer'
+MEDUSA_MULTITHREAD = False  # This doesn't work for some reason
 MEDUSA_DEPLOY_DIR = DEPLOY_DIR
 
-MEDUSA_RENDER_PATHS = (
-    '/', '/cms/app/',
-)
+MEDUSA_RENDER_PATHS = [
+    '/',
+]

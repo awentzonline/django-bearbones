@@ -8,7 +8,7 @@ from example.models import SitePush
 
 
 class Command(BaseCommand):
-    can_import_settings = True
+    output_transaction = True
 
     def handle(self, *args, **options):
         sitepush = SitePush.objects.create()

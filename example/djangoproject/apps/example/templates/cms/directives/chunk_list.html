@@ -1,26 +1,38 @@
 <div>
 {% verbatim %}
-<div class="row" ng-repeat="chunk in chunks">
+<div class="row chunk-row" ng-repeat="chunk in chunks">
     <div class="col-xs-12">
-        <h6 class="pull-left">{{ chunk.verboseName }}</h6>
-        <div class="form-group">
-            <button ng-click="removeChunk(chunk.id)" class="btn btn-default">
-                <span class="glyphicon glyphicon-remove"></span>
-            </button>
+        <div class="input-group">
+            <div class="input-group-addon">
+                {{ chunk.verboseName }}
+                <div class="pull-right">
+                    <button ng-click="moveChunk(chunk.id)" class="btn btn-default">
+                        <span class="glyphicon glyphicon-arrow-up"></span>
+                    </button>
+                    <button ng-click="moveChunk(chunk.id)" class="btn btn-default">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                    </button>
+                    <button ng-click="removeChunk(chunk.id)" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-control">
+                <ng-include src="'/cms/templates/chunks/' + chunk.type + '.html'"></ng-include>
+            </div>
         </div>
-        <ng-include src="'/cms/templates/chunks/' + chunk.type + '.html'"></ng-include>
     </div>
 </div>
-<div class="row">
+<section class="row">
     <div class="col-xs-12">
         <label>
             <select ng-model="newChunkType" ng-options="v.type as v.verboseName for v in chunkChoices" class="form-control">
             </select>
         </label>
         <button ng-click="appendChunk()" class="btn btn-default">
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="glyphicon glyphicon-plus"></span> Chunk
         </button>
     </div>
-</div>
+</section>
 {% endverbatim %}
 </div>

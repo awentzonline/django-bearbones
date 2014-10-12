@@ -9,6 +9,8 @@ class Tag(BaseTag):
 
 
 class Content(BaseContent):
+    description = models.TextField(default='', blank=True)
+
     class Meta:
         ordering = ('-time_created',)
 

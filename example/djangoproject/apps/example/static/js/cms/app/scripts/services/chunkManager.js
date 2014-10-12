@@ -69,5 +69,12 @@ angular.module('cmsApp')
           caption: ''
         }
       }
+    },
+    youtube: {
+      type: 'youtube',
+      verboseName: 'YouTube',
+      data: {
+        youtubeId: ''
+      }
     }
   });

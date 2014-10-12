@@ -15,6 +15,7 @@ angular.module('cmsApp')
     };
     $scope.publishContent = function () {
         notificationService.info('Publishing...');
+        $scope.content.time_published = new Date();
         $scope.content.save().then(function (data) {
             notificationService.success('Published');
         });

@@ -35,4 +35,6 @@ class BaseContentViewSet(viewsets.ModelViewSet):
     @decorators.action()
     def publish(self):
         self.object.time_published = timezone.now()
+        self.object.save()
         return Response(dict(detail="Published"))
+
