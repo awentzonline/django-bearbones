@@ -32,6 +32,10 @@ angular.module('cmsApp', [
   })
   .config(['notificationServiceProvider', function(notificationServiceProvider) {
     notificationServiceProvider.setDefaults({
-      delay: 1000
+      delay: 1000,
+      nonblock: {
+        nonblock: true,
+        nonblock_opacity: .2
+      }
     });
   }]);

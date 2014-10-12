@@ -1,6 +1,7 @@
 from bearbones.models import BaseContent, BaseTag
 from django.core.urlresolvers import reverse
 from django.db import models
+from jsonfield import JSONField
 
 
 class Tag(BaseTag):
@@ -20,6 +21,10 @@ class Content(BaseContent):
 
 class CoolContent(Content):
     cool = models.BooleanField(default=True)
+
+
+class Post(Content):
+    chunks = JSONField(default=[], blank=True)
 
 
 class SitePush(models.Model):

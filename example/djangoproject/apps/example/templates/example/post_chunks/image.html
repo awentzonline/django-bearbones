@@ -1,0 +1,6 @@
+{% with chunk.image as image %}
+<img src="{{ image.url }}" alt="{{ image.caption }}">
+{% if image.caption %}
+<p class="image-caption">{{ image.caption|safe }}</p>
+{% endif %}
+{% endwith %}

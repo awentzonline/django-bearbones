@@ -1,0 +1,8 @@
+{% extends "bearbones/content_detail.html" %}
+{% block content_body %}
+    {% for chunk in content.chunks %}
+    <div class="post-chunk">
+        {% include 'example/post_chunks/'|add:chunk.type|add:'.html' %}   
+    </div>
+    {% endfor %}
+{% endblock %}

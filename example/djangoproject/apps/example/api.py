@@ -3,9 +3,9 @@ from rest_framework import routers, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Content, CoolContent, SitePush
+from .models import Content, CoolContent, Post, SitePush
 from .serializers import (
-    ContentSerializer, CoolContentSerializer, SitePushSerializer
+    ContentSerializer, CoolContentSerializer, PostSerializer, SitePushSerializer
 )
 
 
@@ -13,6 +13,7 @@ class ContentViewSet(BaseContentViewSet):
     model = Content
     serializer_class = None
     serializer_map = (
+        (Post, PostSerializer),
         (CoolContent, CoolContentSerializer),
         (Content, ContentSerializer),
     )
