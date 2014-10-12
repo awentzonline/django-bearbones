@@ -146,14 +146,14 @@ PIPELINE_CSS = {
 PIPELINE_JS = {
     'main': {
         'source_filenames': (
-            'bower/jquery/dist/jquery.js',
+            'bower/jquery/jquery.js',
             'bower/bootstrap/dist/js/bootstrap.js',
         ),
         'output_filename': 'js/main.js'
     },
     'cms': {
         'source_filenames': (
-            'bower/jquery/dist/jquery.js',
+            'bower/jquery/jquery.js',
             'bower/angular/angular.js',
             'bower/bootstrap/dist/js/bootstrap.js',
             'bower/angular-resource/angular-resource.js',
